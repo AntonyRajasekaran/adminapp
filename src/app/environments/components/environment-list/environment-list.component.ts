@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { EnvironmentListService } from '../../services/environment-list.service';
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
 import { EnvironmentListInterface } from '../../types/environmentListInterface';
 
 @Component({
@@ -18,7 +16,6 @@ export class EnvironmentListComponent implements OnInit {
     this.environmentListService
       .getEnvironments()
       .subscribe((envList: EnvironmentListInterface[]) => {
-        console.log(envList);
         this.environmentList = envList;
       });
   }
