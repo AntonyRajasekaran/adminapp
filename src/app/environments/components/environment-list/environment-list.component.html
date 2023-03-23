@@ -1,0 +1,25 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="page-header">
+      <h1>Environment List</h1>
+    </div>
+    <div class="mx-auto">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Version</th>
+            <th>Updated Date</th>
+            <th>Environment</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let env of environmentList">
+            <td>{{ env.version }}</td>
+            <td>{{ env.updateDate | date }}</td>
+            <td>{{ env.environment }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
